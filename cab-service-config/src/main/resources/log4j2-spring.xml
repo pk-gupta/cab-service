@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="60">
+    <Properties>
+        <Property name="log-path">../logs/mfleet-logs</Property>
+        <Property name="archive">${log-path}/logs-archive</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console-Appender" target="SYSTEM_OUT" follow="true">
+            <PatternLayout>
+                <pattern>
+                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>
+            </PatternLayout>
+        </Console>
+      
+        <RollingFile name="Cab_Service_Appender" follow="true"
+                     fileName="${log-path}/cab-service-logs.log"
+                     filePattern="${archive}/cab-service-logs-%d{yyyy-MM-dd-hh-mm}.log" immediateFlush="true">
+            <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+            <Policies>
+                 <TimeBasedTriggeringPolicy/>
+                 <SizeBasedTriggeringPolicy size="1000 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="30"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.marlabs.cab.service" level="info" additivity="false" >
+            <AppenderRef ref="Cab_Service_Appender" level="info"/>
+            <AppenderRef ref="Console-Appender" level="info"/>
+         </Logger>
+        <Root level="info">
+            <AppenderRef ref="Console-Appender"/>
+        </Root>
+    </Loggers>
+</Configuration>

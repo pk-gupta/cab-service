@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.marlabs.cab.service</groupId>
+    <artifactId>cab-service-server</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.marlabs.cab.service.domain</groupId>
+  <artifactId>cab-service-domain</artifactId>
+  <name>cab-service-domain</name>
+  <description>Contains all project Service classes</description>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.marlabs.cab.service.persistance</groupId>
+  		<artifactId>cab-service-persistance</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+</project>

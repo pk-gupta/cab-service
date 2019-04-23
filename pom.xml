@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.marlabs.cab.service</groupId>
+  <artifactId>cab-service-server</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>cab-service-server</name>
+  <description>Cab Service - Multiple modules</description>
+  
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.4.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+	<modules>
+  		<module>cab-service-config</module>
+  		<module>cab-service-common</module>
+  		<module>cab-service-persistance</module>
+  		<module>cab-service-domain</module>
+  		<module>cab-service-web</module>
+  		<module>cab-service-application</module>
+  		<module>cab-service-security</module>
+	</modules>
+	  
+</project>

@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.marlabs.cab.service</groupId>
+    <artifactId>cab-service-server</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>com.marlabs.cab.service.security</groupId>
+  <artifactId>cab-service-security</artifactId>
+  <name>cab-service-security</name>
+  <description>Contains User Atuhentication and Autherization Implementations</description>
+  
+  <dependencies>
+    <dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-security</artifactId>
+	</dependency>
+	<dependency>
+	    <groupId>org.mindrot</groupId>
+	    <artifactId>jbcrypt</artifactId>
+	    <version>0.3m</version>
+	</dependency>
+	<!-- JWT token Security
+	<dependency>
+		<groupId>io.jsonwebtoken</groupId>
+		<artifactId>jjwt</artifactId>
+		<version>0.5.1</version>
+	</dependency> -->
+  	<dependency>
+  		<groupId>com.marlabs.cab.service.web</groupId>
+  		<artifactId>cab-service-web</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+  
+</project>
